@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button, Table } from "reactstrap";
 import ProductList from "../data/ProductList";
 import CurrentUser from "../data/CurrentUser";
@@ -51,6 +51,13 @@ export default function Cart() {
                     // If total cost is greater than 0, display cart items
                     <>
                         <Table bordered>
+                            <thead>
+                                <td>Product</td>
+                                <td>Price</td>
+                                <td>Quantity</td>
+                                <td>Remove</td>
+                            </thead>
+
                             {cart.map((product) => {
                                 if (product.quantity > 0) {
                                     const subtotal = product.quantity * product.price;
@@ -59,7 +66,11 @@ export default function Cart() {
                                     return (
                                         <tr key={product.id}>
                                             <td>
-                                                <h2>{product.name}</h2>
+                                                <Link to={`/product/${product.id}`}>
+                                                    <p className="product-name">
+                                                        {product.name}
+                                                    </p>
+                                                </Link>
                                             </td>
                                             <td>
                                                 <p>${Number(subtotal).toFixed(2)}</p>
@@ -77,7 +88,7 @@ export default function Cart() {
                         </Table>
                         
                         <p className="product-price">
-                            Total: ${Math.abs(Number(total).toFixed(2))}
+                            Total: ${Number(total).toFixed(2)}
                         </p>
                         
                         <div className="shipping-info">

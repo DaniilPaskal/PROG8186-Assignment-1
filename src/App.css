@@ -168,8 +168,17 @@ a {
 }
 
 /* Cart page */
+.product-name {
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+.product-name:hover {
+  text-decoration: underline;
+}
+
 .remove-product {
-  width: 50px;
+  width: 40px;
 }
 
 .shipping-info {
@@ -187,7 +196,7 @@ a {
 
 /* Transaction page */
 .checkmark {
-  animation: checkmark-spin 2 5s ease;
+  animation: checkmark-spin 2 2.5s ease;
   aspect-ratio: 1 / 1;
   background-color: var(--accent-blue);
   border-radius: 50%;
