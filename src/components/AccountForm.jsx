@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button } from "reactstrap";
 import { User } from "../data/Classes";
 import CurrentUser from "../data/CurrentUser";
 import './../App.css';

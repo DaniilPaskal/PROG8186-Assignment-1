@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button } from "reactstrap";
 
 export default function ProductCounter (props) {
     const product = props.product;

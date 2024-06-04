@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Table } from "react-bootstrap";
+import { Button, Table } from "reactstrap";
 import ProductList from "../data/ProductList";
 import CurrentUser from "../data/CurrentUser";
 import ProductCounter from "../components/ProductCounter";

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Navbar } from "react-bootstrap";
+import { Navbar } from "reactstrap";
 import './../App.css';
 
 export default function Navigation() {
