@@ -31,8 +31,9 @@ export default function AccountForm() {
         alert("User settings updated!");
     }
 
-    // Set CurrentUser as logged out, navigate to logout page
+    // Update CurrentUser with empty fields, set CurrentUser as logged out, navigate to logout page
     const handleLogout = () => {
+        CurrentUser.update("", "", "", "", "");
         CurrentUser.logout();
         navigate("/done/logout");
     }
