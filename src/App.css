@@ -238,14 +238,14 @@ a {
   .product-card-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  .product-details-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 400px) {
   .product-card-container {
-    grid-template-columns: 1fr;
-  }
-
-  .product-details-container {
     grid-template-columns: 1fr;
   }
 }
