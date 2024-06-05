@@ -23,8 +23,10 @@ export default function Cart() {
     // Remove product from cart
     const removeFromCart = (product) => {
         setTotal(total - (product.quantity * product.price));
+        
         cart.splice(cart.indexOf(product), 1);
         setCart([...cart]);
+
         product.removeFromCart();
     }
 
@@ -33,10 +35,11 @@ export default function Cart() {
         cart.map((product) => {
             product.removeFromCart();
         })
+
         navigate("/done/purchase");
     }
 
-    // Set total cost state (to be passed to counter component)
+    // Set total cost state (to be passed to product counter component)
     const changeTotalCost = (costChange) => {
         setTotal(total + costChange);
     }
@@ -47,6 +50,7 @@ export default function Cart() {
 
             {CurrentUser.getStatus() ?
                 // If user logged in, display table of cart products and purchase button
+                
                 total > 0 ?
                     // If total cost is greater than 0, display cart items
                     <>
@@ -61,7 +65,6 @@ export default function Cart() {
                             {cart.map((product) => {
                                 if (product.quantity > 0) {
                                     const subtotal = product.quantity * product.price;
-                                    initialTotal += subtotal;
                 
                                     return (
                                         <tr key={product.id}>
