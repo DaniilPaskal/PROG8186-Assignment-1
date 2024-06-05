@@ -1,5 +1,6 @@
 import { Product } from "./Classes";
 
+// Hardcoded list of products
 const ProductList = [
     new Product("0", "Hefty Book", "/assets/book.jpg", "A book to decorate your shelf. Might contain text.", 19.95),
     new Product("1", "LED Candle", "/assets/candle.jpg", "In darkness see, combustion-free. Batteries not included.", 5.50),

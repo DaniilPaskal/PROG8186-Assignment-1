@@ -1,3 +1,4 @@
+// Product class
 export class Product {
     constructor (id, name, image, description, price) {
         this.id = id;
@@ -11,6 +12,7 @@ export class Product {
         this.removeFromCart = this.removeFromCart.bind(this);
     }
 
+    // Methods for changing quantity
     setQuantity(quantity) {
         this.quantity = quantity;
     }
@@ -20,6 +22,7 @@ export class Product {
     }
 }
 
+// User class
 export class User {
     constructor (name = "", email = "", address = "", city = "", province = "") {
         this.name = name;
@@ -30,6 +33,7 @@ export class User {
         this.loggedIn = false;
     }
 
+    // Getter and setters for logged in status
     getStatus() {
         return this.loggedIn;
     }
@@ -42,7 +46,8 @@ export class User {
         this.loggedIn = false;
     }
 
-    update(name, email, address, city, province) {
+    // Update user info
+    update(name = "", email = "", address = "", city = "", province = "") {
         this.name = name;
         this.email = email;
         this.address = address;
